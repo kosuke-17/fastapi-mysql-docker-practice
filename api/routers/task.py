@@ -9,7 +9,8 @@ router = APIRouter()
 
 @router.get("/tasks", response_model=List[task_schema.Task])
 async def find_all_tasks():
-    return [task_schema.Task(id="1", title="pythonの勉強", done=False)]
+    taskData = task_schema.Task(id="1", title="pythonの勉強しなきゃ")
+    return [taskData]
 
 
 @router.post("/tasks")
