@@ -13,14 +13,14 @@ class TaskCreate(TaskBase):
 
 
 class TaskCreateResponse(TaskCreate):
-    id: str
+    id: int
 
     class Config:
         orm_mode = True
 
 
 class Task(TaskBase):
-    id: str
+    id: int
     done: bool = Field(False, description="完了フラグ")
 
     class Config:
